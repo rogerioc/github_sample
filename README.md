@@ -28,3 +28,6 @@ The app must be prepared to be fault tolerant, responsive and resilient.
 
 # More points
 You get more points if it works offline
+
+# Hints
+https://api.github.com/gists/public?page=0
