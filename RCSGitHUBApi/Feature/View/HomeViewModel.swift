@@ -17,10 +17,14 @@ class HomeViewModel: HomeViewModelProtocol{
     }
     
     func getRepositories() {
+        self.publicRepositoriesDelegate?.repositoriesIsLoading(true)
         gitHubApi?.getPublicRepositories(page: 0, success: { (gitHubModel) in
-            self.publicRepositoriesDelegate?.repositoriesSuccess(data: gitHubModel)
+            let showGitHubModels = gitHubModel.map{ HelperConvert.gitHubApiModelToGitHubShow($0)}
+            self.publicRepositoriesDelegate?.repositoriesSuccess(data: showGitHubModels)
+            self.publicRepositoriesDelegate?.repositoriesIsLoading(false)
         }) { (code, reason) in
             self.publicRepositoriesDelegate?.repositoriesError(code!)
+            self.publicRepositoriesDelegate?.repositoriesIsLoading(false)
         }
     }
 }

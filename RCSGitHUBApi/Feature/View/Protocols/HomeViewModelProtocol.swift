@@ -13,7 +13,7 @@ protocol HomeViewModelProtocol {
 }
 
 protocol GetPublicRepositories: class {
-    func repositoriesSuccess(data:GithubApiModel)
+    func repositoriesSuccess(data:[ShowGitHubData])
     func repositoriesError(_ error: Int)
     func repositoriesIsLoading(_ loading: Bool)
     func repositoriesIsRefreshing(_ loading: Bool)

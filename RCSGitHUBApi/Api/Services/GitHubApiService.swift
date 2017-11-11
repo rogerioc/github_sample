@@ -9,22 +9,25 @@
 import Foundation
 import Alamofire
 import SwiftyJSON
+import ObjectMapper
 
 class GitHubApiService {
     
 }
 
 extension GitHubApiService: GitHubApiProtocol {
-    func getPublicRepositories(page: Int, success: @escaping (_ gitApiModel: GithubApiModel) -> Void, failure: @escaping (_ code: Int?, _ reason: String?) -> Void) {
-        var parameters: [String: Any] = [:]
-        parameters.updateValue(page, forKey: "page")
+    func getPublicRepositories(page: Int, success: @escaping (_ gitApiModel: [GithubApiModel]) -> Void, failure: @escaping (_ code: Int?, _ reason: String?) -> Void) {
+        let parameters: [String: Any] = ["page":page]
         Alamofire.request(GitHubApi.getPublicRepositories(parameters: parameters)).validate().responseJSON { response in
-            
             let status = response.response?.statusCode
             switch response.result {
                 case .success:
-                    let dict = response.result.value as? [String : AnyObject]
-                    success(GithubApiModel.init(fromDictionary: dict!))
+                    if let json =  response.result.value as? [[String : Any]] {
+                        let gitHubResult =  Mapper<GithubApiModel>().mapArray(JSONArray: json)
+                        print(gitHubResult)
+                        success(gitHubResult)
+                    }
+                
                 case let .failure(error):
                     print(error)
                     failure(status, response.result.description)

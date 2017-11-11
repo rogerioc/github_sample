@@ -32,7 +32,7 @@ enum GitHubApi: URLRequestConvertible {
         
         switch self {
         case let .getPublicRepositories(parameters):
-            urlRequest = try Alamofire.JSONEncoding.default.encode(urlRequest, with: parameters)
+            urlRequest = try URLEncoding.default.encode(urlRequest, with: parameters)
         }
         return urlRequest
     }

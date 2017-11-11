@@ -7,13 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4834769F1FB6FA500068BDFD /* RepoViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4834769E1FB6FA500068BDFD /* RepoViewCell.swift */; };
+		483476A31FB725F10068BDFD /* ShowGitHubData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 483476A21FB725F10068BDFD /* ShowGitHubData.swift */; };
+		483476A61FB726590068BDFD /* HelperConvert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 483476A51FB726590068BDFD /* HelperConvert.swift */; };
+		483476A81FB72CBB0068BDFD /* Alerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 483476A71FB72CBB0068BDFD /* Alerts.swift */; };
+		483476AA1FB72E990068BDFD /* Messages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 483476A91FB72E990068BDFD /* Messages.swift */; };
+		483476AC1FB7300E0068BDFD /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 483476AB1FB7300D0068BDFD /* UITableView+Extension.swift */; };
+		483476AF1FB730880068BDFD /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 483476AE1FB730870068BDFD /* ReusableView.swift */; };
+		483476B11FB734EB0068BDFD /* NibLoadableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 483476B01FB734EA0068BDFD /* NibLoadableView.swift */; };
+		483476B31FB748A00068BDFD /* RepoViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4834769C1FB6F95F0068BDFD /* RepoViewCell.xib */; };
 		484189231FB5F83D009EC310 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 484189221FB5F83D009EC310 /* AppDelegate.swift */; };
 		484189251FB5F83D009EC310 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 484189241FB5F83D009EC310 /* ViewController.swift */; };
 		484189281FB5F83D009EC310 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 484189261FB5F83D009EC310 /* Main.storyboard */; };
 		4841892A1FB5F83D009EC310 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 484189291FB5F83D009EC310 /* Assets.xcassets */; };
 		4841892D1FB5F83D009EC310 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4841892B1FB5F83D009EC310 /* LaunchScreen.storyboard */; };
 		484189381FB5FD7A009EC310 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 484189371FB5FD7A009EC310 /* Podfile */; };
-		4841893E1FB606F5009EC310 /* Readme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4841893A1FB606F5009EC310 /* Readme.swift */; };
+		4841893E1FB606F5009EC310 /* FileInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4841893A1FB606F5009EC310 /* FileInfo.swift */; };
 		4841893F1FB606F5009EC310 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4841893B1FB606F5009EC310 /* File.swift */; };
 		484189401FB606F5009EC310 /* GithubApiModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4841893C1FB606F5009EC310 /* GithubApiModel.swift */; };
 		484189411FB606F5009EC310 /* Owner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4841893D1FB606F5009EC310 /* Owner.swift */; };
@@ -30,6 +39,15 @@
 
 /* Begin PBXFileReference section */
 		1EF39924F2EFCF053BE29DFA /* Pods_RCSGitHUBApi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RCSGitHUBApi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4834769C1FB6F95F0068BDFD /* RepoViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RepoViewCell.xib; sourceTree = "<group>"; };
+		4834769E1FB6FA500068BDFD /* RepoViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoViewCell.swift; sourceTree = "<group>"; };
+		483476A21FB725F10068BDFD /* ShowGitHubData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowGitHubData.swift; sourceTree = "<group>"; };
+		483476A51FB726590068BDFD /* HelperConvert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperConvert.swift; sourceTree = "<group>"; };
+		483476A71FB72CBB0068BDFD /* Alerts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alerts.swift; sourceTree = "<group>"; };
+		483476A91FB72E990068BDFD /* Messages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Messages.swift; sourceTree = "<group>"; };
+		483476AB1FB7300D0068BDFD /* UITableView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
+		483476AE1FB730870068BDFD /* ReusableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReusableView.swift; sourceTree = "<group>"; };
+		483476B01FB734EA0068BDFD /* NibLoadableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NibLoadableView.swift; sourceTree = "<group>"; };
 		4841891F1FB5F83D009EC310 /* RCSGitHUBApi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RCSGitHUBApi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		484189221FB5F83D009EC310 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		484189241FB5F83D009EC310 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -38,7 +56,7 @@
 		4841892C1FB5F83D009EC310 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4841892E1FB5F83D009EC310 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		484189371FB5FD7A009EC310 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
-		4841893A1FB606F5009EC310 /* Readme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Readme.swift; sourceTree = "<group>"; };
+		4841893A1FB606F5009EC310 /* FileInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileInfo.swift; sourceTree = "<group>"; };
 		4841893B1FB606F5009EC310 /* File.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 		4841893C1FB606F5009EC310 /* GithubApiModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GithubApiModel.swift; sourceTree = "<group>"; };
 		4841893D1FB606F5009EC310 /* Owner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Owner.swift; sourceTree = "<group>"; };
@@ -76,6 +94,44 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		4834769B1FB6F9380068BDFD /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				4834769C1FB6F95F0068BDFD /* RepoViewCell.xib */,
+				4834769E1FB6FA500068BDFD /* RepoViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		483476A11FB725D00068BDFD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				483476A21FB725F10068BDFD /* ShowGitHubData.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		483476A41FB7263A0068BDFD /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				483476AD1FB730760068BDFD /* Extensions */,
+				483476A51FB726590068BDFD /* HelperConvert.swift */,
+				483476A71FB72CBB0068BDFD /* Alerts.swift */,
+				483476A91FB72E990068BDFD /* Messages.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		483476AD1FB730760068BDFD /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				483476B01FB734EA0068BDFD /* NibLoadableView.swift */,
+				483476AE1FB730870068BDFD /* ReusableView.swift */,
+				483476AB1FB7300D0068BDFD /* UITableView+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		484189161FB5F83D009EC310 = {
 			isa = PBXGroup;
 			children = (
@@ -98,6 +154,7 @@
 		484189211FB5F83D009EC310 /* RCSGitHUBApi */ = {
 			isa = PBXGroup;
 			children = (
+				483476A41FB7263A0068BDFD /* Common */,
 				484189351FB5F87E009EC310 /* Feature */,
 				484189341FB5F86C009EC310 /* Api */,
 				484189221FB5F83D009EC310 /* AppDelegate.swift */,
@@ -130,6 +187,8 @@
 		484189361FB5F887009EC310 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				483476A11FB725D00068BDFD /* Model */,
+				4834769B1FB6F9380068BDFD /* Cells */,
 				484189521FB61975009EC310 /* Protocols */,
 				4841894E1FB61852009EC310 /* HomeViewController.swift */,
 				484189501FB618AD009EC310 /* HomeViewModel.swift */,
@@ -143,7 +202,7 @@
 				4841893B1FB606F5009EC310 /* File.swift */,
 				4841893C1FB606F5009EC310 /* GithubApiModel.swift */,
 				4841893D1FB606F5009EC310 /* Owner.swift */,
-				4841893A1FB606F5009EC310 /* Readme.swift */,
+				4841893A1FB606F5009EC310 /* FileInfo.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -239,6 +298,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4841892D1FB5F83D009EC310 /* LaunchScreen.storyboard in Resources */,
+				483476B31FB748A00068BDFD /* RepoViewCell.xib in Resources */,
 				4841892A1FB5F83D009EC310 /* Assets.xcassets in Resources */,
 				484189381FB5FD7A009EC310 /* Podfile in Resources */,
 				484189281FB5F83D009EC310 /* Main.storyboard in Resources */,
@@ -263,7 +323,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		CEC11A0FCADFB9933CCE1A49 /* [CP] Embed Pods Frameworks */ = {
@@ -311,18 +371,26 @@
 			buildActionMask = 2147483647;
 			files = (
 				484189251FB5F83D009EC310 /* ViewController.swift in Sources */,
+				483476AA1FB72E990068BDFD /* Messages.swift in Sources */,
+				483476AC1FB7300E0068BDFD /* UITableView+Extension.swift in Sources */,
 				484189471FB60C48009EC310 /* GitHubApiProtocol.swift in Sources */,
+				4834769F1FB6FA500068BDFD /* RepoViewCell.swift in Sources */,
 				484189411FB606F5009EC310 /* Owner.swift in Sources */,
 				4841893F1FB606F5009EC310 /* File.swift in Sources */,
+				483476A31FB725F10068BDFD /* ShowGitHubData.swift in Sources */,
 				484189401FB606F5009EC310 /* GithubApiModel.swift in Sources */,
+				483476B11FB734EB0068BDFD /* NibLoadableView.swift in Sources */,
 				4841894D1FB611E2009EC310 /* GitHubApiService.swift in Sources */,
 				484189541FB6198B009EC310 /* HomeViewModelProtocol.swift in Sources */,
+				483476AF1FB730880068BDFD /* ReusableView.swift in Sources */,
 				484189231FB5F83D009EC310 /* AppDelegate.swift in Sources */,
+				483476A81FB72CBB0068BDFD /* Alerts.swift in Sources */,
 				484189511FB618AD009EC310 /* HomeViewModel.swift in Sources */,
 				4841894F1FB61852009EC310 /* HomeViewController.swift in Sources */,
 				484189491FB60F17009EC310 /* GitHubGetPublicRepositories.swift in Sources */,
 				484189431FB60990009EC310 /* GitHubApi.swift in Sources */,
-				4841893E1FB606F5009EC310 /* Readme.swift in Sources */,
+				4841893E1FB606F5009EC310 /* FileInfo.swift in Sources */,
+				483476A61FB726590068BDFD /* HelperConvert.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

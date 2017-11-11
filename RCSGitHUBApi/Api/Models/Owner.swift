@@ -6,9 +6,8 @@
 //	Model file generated using JSONExport: https://github.com/Ahmed-Ali/JSONExport
 
 import Foundation
-
-
-class Owner : NSObject, NSCoding{
+import ObjectMapper
+class Owner : Mappable{
 
 	var avatarUrl : String!
 	var eventsUrl : String!
@@ -28,116 +27,33 @@ class Owner : NSObject, NSCoding{
 	var type : String!
 	var url : String!
 
-
-	/**
-	 * Instantiate the instance using the passed dictionary values to set the properties values
-	 */
-	init(fromDictionary dictionary: [String:Any]){
-		avatarUrl = dictionary["avatar_url"] as? String
-		eventsUrl = dictionary["events_url"] as? String
-		followersUrl = dictionary["followers_url"] as? String
-		followingUrl = dictionary["following_url"] as? String
-		gistsUrl = dictionary["gists_url"] as? String
-		gravatarId = dictionary["gravatar_id"] as? String
-		htmlUrl = dictionary["html_url"] as? String
-		id = dictionary["id"] as? Int
-		login = dictionary["login"] as? String
-		organizationsUrl = dictionary["organizations_url"] as? String
-		receivedEventsUrl = dictionary["received_events_url"] as? String
-		reposUrl = dictionary["repos_url"] as? String
-		siteAdmin = dictionary["site_admin"] as? Bool
-		starredUrl = dictionary["starred_url"] as? String
-		subscriptionsUrl = dictionary["subscriptions_url"] as? String
-		type = dictionary["type"] as? String
-		url = dictionary["url"] as? String
-	}
-
-	/**
-	 * Returns all the available property values in the form of [String:Any] object where the key is the approperiate json key and the value is the value of the corresponding property
-	 */
-	func toDictionary() -> [String:Any]
-	{
-		var dictionary = [String:Any]()
-		if avatarUrl != nil{
-			dictionary["avatar_url"] = avatarUrl
-		}
-		if eventsUrl != nil{
-			dictionary["events_url"] = eventsUrl
-		}
-		if followersUrl != nil{
-			dictionary["followers_url"] = followersUrl
-		}
-		if followingUrl != nil{
-			dictionary["following_url"] = followingUrl
-		}
-		if gistsUrl != nil{
-			dictionary["gists_url"] = gistsUrl
-		}
-		if gravatarId != nil{
-			dictionary["gravatar_id"] = gravatarId
-		}
-		if htmlUrl != nil{
-			dictionary["html_url"] = htmlUrl
-		}
-		if id != nil{
-			dictionary["id"] = id
-		}
-		if login != nil{
-			dictionary["login"] = login
-		}
-		if organizationsUrl != nil{
-			dictionary["organizations_url"] = organizationsUrl
-		}
-		if receivedEventsUrl != nil{
-			dictionary["received_events_url"] = receivedEventsUrl
-		}
-		if reposUrl != nil{
-			dictionary["repos_url"] = reposUrl
-		}
-		if siteAdmin != nil{
-			dictionary["site_admin"] = siteAdmin
-		}
-		if starredUrl != nil{
-			dictionary["starred_url"] = starredUrl
-		}
-		if subscriptionsUrl != nil{
-			dictionary["subscriptions_url"] = subscriptionsUrl
-		}
-		if type != nil{
-			dictionary["type"] = type
-		}
-		if url != nil{
-			dictionary["url"] = url
-		}
-		return dictionary
-	}
-
+    required init(map: Map) {
+        mapping(map: map)
+    }
     /**
-    * NSCoding required initializer.
-    * Fills the data from the passed decoder
-    */
-    @objc required init(coder aDecoder: NSCoder)
-	{
-         avatarUrl = aDecoder.decodeObject(forKey: "avatar_url") as? String
-         eventsUrl = aDecoder.decodeObject(forKey: "events_url") as? String
-         followersUrl = aDecoder.decodeObject(forKey: "followers_url") as? String
-         followingUrl = aDecoder.decodeObject(forKey: "following_url") as? String
-         gistsUrl = aDecoder.decodeObject(forKey: "gists_url") as? String
-         gravatarId = aDecoder.decodeObject(forKey: "gravatar_id") as? String
-         htmlUrl = aDecoder.decodeObject(forKey: "html_url") as? String
-         id = aDecoder.decodeObject(forKey: "id") as? Int
-         login = aDecoder.decodeObject(forKey: "login") as? String
-         organizationsUrl = aDecoder.decodeObject(forKey: "organizations_url") as? String
-         receivedEventsUrl = aDecoder.decodeObject(forKey: "received_events_url") as? String
-         reposUrl = aDecoder.decodeObject(forKey: "repos_url") as? String
-         siteAdmin = aDecoder.decodeObject(forKey: "site_admin") as? Bool
-         starredUrl = aDecoder.decodeObject(forKey: "starred_url") as? String
-         subscriptionsUrl = aDecoder.decodeObject(forKey: "subscriptions_url") as? String
-         type = aDecoder.decodeObject(forKey: "type") as? String
-         url = aDecoder.decodeObject(forKey: "url") as? String
-
+     * Instantiate the instance using the passed dictionary values to set the properties values
+     */
+    func mapping(map: Map) {
+		avatarUrl <- map["avatar_url"]
+		eventsUrl <- map["events_url"]
+		followersUrl <- map["followers_url"]
+		followingUrl <- map["following_url"]
+		gistsUrl <- map["gists_url"]
+		gravatarId <- map["gravatar_id"]
+		htmlUrl <- map["html_url"]
+		id <- map["id"]
+		login <- map["login"]
+		organizationsUrl <- map["organizations_url"]
+		receivedEventsUrl <- map["received_events_url"]
+		reposUrl <- map["repos_url"]
+		siteAdmin <- map["site_admin"]
+		starredUrl <- map["starred_url"]
+		subscriptionsUrl <- map["subscriptions_url"]
+		type <- map["type"]
+		url <- map["url"]
 	}
 
+	
     /**
     * NSCoding required method.
     * Encodes mode properties into the decoder

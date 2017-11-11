@@ -9,5 +9,5 @@
 import Foundation
 
 protocol GitHubApiProtocol {
-    func getPublicRepositories(page: Int, success: @escaping (_ gitApiModel: GithubApiModel) -> Void, failure: @escaping (_ code: Int?, _ reason: String?) -> Void)
+    func getPublicRepositories(page: Int, success: @escaping (_ gitApiModel: [GithubApiModel]) -> Void, failure: @escaping (_ code: Int?, _ reason: String?) -> Void)
 }

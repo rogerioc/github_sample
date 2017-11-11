@@ -8,6 +8,7 @@ target 'RCSGitHUBApi' do
     pod 'AlamofireImage', '~> 3.1'
     pod 'SwiftyJSON'
     pod 'SwiftLint'
+    pod 'ObjectMapper', '~> 3.1.0'
   # Pods for RCSGitHUBApi
 
 end
