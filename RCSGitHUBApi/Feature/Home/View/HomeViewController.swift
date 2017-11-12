@@ -13,7 +13,7 @@ class HomeViewController: UITableViewController {
     
     @IBOutlet weak var label: UILabel!
     var homeViewModel: HomeViewModelProtocol?
-    
+    //var refreshControl = UIRefreshControl()!
     var showGitHubDatas:[ShowGitHubData] = [] {
         didSet { tableView.reloadData() }
     }
@@ -23,6 +23,7 @@ class HomeViewController: UITableViewController {
             if(self.load) {
                 self.loading.startAnimating()
             }else {
+                self.refreshControl?.endRefreshing()
                 self.loading.stopAnimating()
             }
         }
@@ -32,9 +33,22 @@ class HomeViewController: UITableViewController {
         super.viewDidLoad()
         load = false
         tableView.register(RepoViewCell.self)
+        self.refreshControl = UIRefreshControl()
         homeViewModel = HomeViewModel.init(gitHubApi: GitHubApiService())
         homeViewModel?.publicRepositoriesDelegate = self
-        homeViewModel?.getRepositories()      
+        homeViewModel?.getRepositories()
+        if #available(iOS 10.0, *) {
+            tableView.refreshControl = refreshControl
+        } else {
+            tableView.addSubview(refreshControl!)
+        }
+        refreshControl!.addTarget(self, action: #selector(refreshData(_:)), for: .valueChanged)
+
+    }
+    
+    @objc private func refreshData(_ sender: Any) {
+        self.showGitHubDatas.removeAll()
+        homeViewModel?.getRepositories()
     }
     
 }
