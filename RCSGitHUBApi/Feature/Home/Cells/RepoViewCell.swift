@@ -13,11 +13,11 @@ class RepoViewCell: UITableViewCell,ReusableView,NibLoadableView  {
     @IBOutlet weak var name: UILabel!
     @IBOutlet weak var type: UILabel!
     @IBOutlet weak var avatar: UIImageView!
-
     
     func setup(showGitHubData:ShowGitHubData) {
         name.text = showGitHubData.ownerName
-        type.text = ""
+        type.text = showGitHubData.type
+        avatar.download(image: showGitHubData.avatar)
     }
     
 }

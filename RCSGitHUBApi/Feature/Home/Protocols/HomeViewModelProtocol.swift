@@ -10,6 +10,7 @@ import Foundation
 protocol HomeViewModelProtocol {
     weak var publicRepositoriesDelegate:GetPublicRepositories? {get set}
     func getRepositories()
+    func getNextData()
 }
 
 protocol GetPublicRepositories: class {

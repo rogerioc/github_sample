@@ -9,6 +9,7 @@ target 'RCSGitHUBApi' do
     pod 'SwiftyJSON'
     pod 'SwiftLint'
     pod 'ObjectMapper', '~> 3.1.0'
+    pod 'Kingfisher', '~> 4.0'
   # Pods for RCSGitHUBApi
 
 end

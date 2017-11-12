@@ -33,14 +33,14 @@ class HomeViewController: UITableViewController {
         tableView.register(RepoViewCell.self)
         homeViewModel = HomeViewModel.init(gitHubApi: GitHubApiService())
         homeViewModel?.publicRepositoriesDelegate = self
-        homeViewModel?.getRepositories()
+        homeViewModel?.getRepositories()      
     }
     
 }
 
 extension HomeViewController: GetPublicRepositories {
     func repositoriesSuccess(data:[ShowGitHubData]) {
-          self.showGitHubDatas = data
+          self.showGitHubDatas.append(contentsOf: data)
         
     }
     func repositoriesError(_ error: Int) {
@@ -69,11 +69,35 @@ extension HomeViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell : RepoViewCell = tableView.dequeueReusableCell(for: indexPath)
         cell.setup(showGitHubData:showGitHubDatas[indexPath.row])
-//        if indexPath.row == repositories.count-1 && !isFinishLoad {
-//            currentPage += 1
-//            //fetchRepositories(query:RepositoryServiceLanguages.Java, page: currentPage)
-//        }
+        if indexPath.row == showGitHubDatas.count-1 {
+            homeViewModel?.getNextData()
+        }
         
         return cell
+    }
+}
+
+// MARK: - UITableViewDelegate
+extension HomeViewController {
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: InfoViewConstants.SegueIdentifiers.InfoView, sender: showGitHubDatas[indexPath.row])
+    }
+}
+
+
+extension HomeViewController {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if let identifier = segue.identifier {
+            switch identifier {
+            case InfoViewConstants.SegueIdentifiers.InfoView:
+                if let destinationController = segue.destination as? InfoViewController {
+                    destinationController.showGitHubData = sender as? ShowGitHubData ?? ShowGitHubData()
+                }
+                
+            default:
+                self.showAlerError(title: Messages.ErrorTitle, message: Messages.InternalError)
+            }
+        }
     }
 }

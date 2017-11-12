@@ -1,0 +1,19 @@
+//
+//  InfoViewModel.swift
+//  RCSGitHUBApi
+//
+//  Created by rogerio on 11/11/17.
+//  Copyright © 2017 rogeriocs. All rights reserved.
+//
+
+import Foundation
+
+struct InfoViewConstants {
+    struct SegueIdentifiers {
+        static let InfoView = "SegueInfoView"
+    }
+}
+
+class InfoViewModel {
+    
+}

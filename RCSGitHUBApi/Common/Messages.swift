@@ -9,5 +9,5 @@
 import Foundation
 struct Messages {
     static let ErrorTitle = "Erro"
-    static let InternalError = "Algo deu errado :("
+    static let InternalError = "Ocorreu um erro interno!"
 }
