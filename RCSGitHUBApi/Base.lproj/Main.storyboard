@@ -70,13 +70,23 @@
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="clipsToBounds" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                             </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="1wg-bZ-gCK">
+                                <rect key="frame" x="16" y="335" width="343" height="312"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="mk0-la-bzd" firstAttribute="bottom" secondItem="1wg-bZ-gCK" secondAttribute="bottom" constant="20" id="FFA-JS-03l"/>
+                            <constraint firstItem="1wg-bZ-gCK" firstAttribute="leading" secondItem="mk0-la-bzd" secondAttribute="leading" constant="16" id="Gqz-8j-tub"/>
                             <constraint firstItem="VVL-VI-5xk" firstAttribute="top" secondItem="0DS-Sc-du7" secondAttribute="bottom" constant="45" id="PUU-V7-laX"/>
                             <constraint firstItem="VVL-VI-5xk" firstAttribute="centerX" secondItem="0DS-Sc-du7" secondAttribute="centerX" id="WFT-5G-0qf"/>
                             <constraint firstItem="0DS-Sc-du7" firstAttribute="top" secondItem="mk0-la-bzd" secondAttribute="top" constant="48" id="X52-uz-KJ9"/>
                             <constraint firstItem="mk0-la-bzd" firstAttribute="trailing" secondItem="0DS-Sc-du7" secondAttribute="trailing" constant="1" id="ZaI-wk-zDA"/>
+                            <constraint firstItem="1wg-bZ-gCK" firstAttribute="top" secondItem="VVL-VI-5xk" secondAttribute="bottom" constant="32" id="bhR-2M-Rxa"/>
+                            <constraint firstItem="mk0-la-bzd" firstAttribute="trailing" secondItem="1wg-bZ-gCK" secondAttribute="trailing" constant="16" id="cY9-9J-E8I"/>
                             <constraint firstItem="VVL-VI-5xk" firstAttribute="leading" secondItem="mk0-la-bzd" secondAttribute="leading" constant="119" id="gPj-px-GUA"/>
                             <constraint firstItem="0DS-Sc-du7" firstAttribute="leading" secondItem="mk0-la-bzd" secondAttribute="leading" id="jb2-fI-hA5"/>
                         </constraints>
@@ -85,6 +95,7 @@
                     <connections>
                         <outlet property="avatar" destination="VVL-VI-5xk" id="JdX-17-IN2"/>
                         <outlet property="name" destination="0DS-Sc-du7" id="I9a-B4-Ak3"/>
+                        <outlet property="typeTextArea" destination="1wg-bZ-gCK" id="18Q-ig-TER"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XyL-v5-gaw" userLabel="First Responder" sceneMemberID="firstResponder"/>

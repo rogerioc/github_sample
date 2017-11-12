@@ -14,9 +14,11 @@ class InfoViewController: UIViewController {
     @IBOutlet weak var avatar: UIImageView!
     var showGitHubData:ShowGitHubData!
     
+    @IBOutlet weak var typeTextArea: UITextView!
     override func viewDidLoad() {
         super.viewDidLoad()
         name.text = self.showGitHubData.ownerName
+        typeTextArea.text = self.showGitHubData.type
         avatar.download(image: self.showGitHubData.avatar)
     }
 }

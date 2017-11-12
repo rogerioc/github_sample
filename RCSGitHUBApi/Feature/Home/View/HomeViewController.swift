@@ -13,6 +13,7 @@ class HomeViewController: UITableViewController {
     
     @IBOutlet weak var label: UILabel!
     var homeViewModel: HomeViewModelProtocol?
+    
     var showGitHubDatas:[ShowGitHubData] = [] {
         didSet { tableView.reloadData() }
     }

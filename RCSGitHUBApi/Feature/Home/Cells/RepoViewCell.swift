@@ -17,6 +17,7 @@ class RepoViewCell: UITableViewCell,ReusableView,NibLoadableView  {
     func setup(showGitHubData:ShowGitHubData) {
         name.text = showGitHubData.ownerName
         type.text = showGitHubData.type
+        avatar.image = nil
         avatar.download(image: showGitHubData.avatar)
     }
     

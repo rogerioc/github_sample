@@ -34,7 +34,7 @@ class GithubApiModel : Mappable {
 	var commitsUrl : String!
 	var createdAt : String!
 	var descriptionField : String!
-	var files : File!
+    var files : [String:FileInfo]?
 	var forksUrl : String!
 	var gitPullUrl : String!
 	var gitPushUrl : String!

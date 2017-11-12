@@ -9,7 +9,7 @@ import Foundation
 import ObjectMapper
 
 class File : Mappable{
-
+    var data : String!
 	var fileInfo : FileInfo!
 
     required init(map: Map) {
