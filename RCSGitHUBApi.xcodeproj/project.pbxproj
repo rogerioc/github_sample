@@ -19,6 +19,8 @@
 		483476B81FB76D2F0068BDFD /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 483476B71FB76D2F0068BDFD /* InfoViewController.swift */; };
 		483476BA1FB76DBB0068BDFD /* InfoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 483476B91FB76DBB0068BDFD /* InfoViewModel.swift */; };
 		483476BC1FB7D8820068BDFD /* UIImageView+Kingfisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 483476BB1FB7D8820068BDFD /* UIImageView+Kingfisher.swift */; };
+		483477311FBA61430068BDFD /* ApiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 483477301FBA61430068BDFD /* ApiTests.swift */; };
+		483477331FBA627A0068BDFD /* GistsListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 483477321FBA627A0068BDFD /* GistsListTests.swift */; };
 		484189231FB5F83D009EC310 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 484189221FB5F83D009EC310 /* AppDelegate.swift */; };
 		484189251FB5F83D009EC310 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 484189241FB5F83D009EC310 /* ViewController.swift */; };
 		484189281FB5F83D009EC310 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 484189261FB5F83D009EC310 /* Main.storyboard */; };
@@ -38,10 +40,22 @@
 		484189511FB618AD009EC310 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 484189501FB618AD009EC310 /* HomeViewModel.swift */; };
 		484189541FB6198B009EC310 /* HomeViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 484189531FB6198B009EC310 /* HomeViewModelProtocol.swift */; };
 		7F7BAF7EFEC0870D20D95B3A /* Pods_RCSGitHUBApi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EF39924F2EFCF053BE29DFA /* Pods_RCSGitHUBApi.framework */; };
+		85E5DF30955857F8B16CE09C /* Pods_RCSGitHUBApiTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E91AB9D188C999FB8E75C693 /* Pods_RCSGitHUBApiTests.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4834772B1FBA61360068BDFD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 484189171FB5F83D009EC310 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4841891E1FB5F83D009EC310;
+			remoteInfo = RCSGitHUBApi;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		1EF39924F2EFCF053BE29DFA /* Pods_RCSGitHUBApi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RCSGitHUBApi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		43E11DD0962CA5990005795C /* Pods-RCSGitHUBApiTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RCSGitHUBApiTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RCSGitHUBApiTests/Pods-RCSGitHUBApiTests.release.xcconfig"; sourceTree = "<group>"; };
 		4834769C1FB6F95F0068BDFD /* RepoViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RepoViewCell.xib; sourceTree = "<group>"; };
 		4834769E1FB6FA500068BDFD /* RepoViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoViewCell.swift; sourceTree = "<group>"; };
 		483476A21FB725F10068BDFD /* ShowGitHubData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowGitHubData.swift; sourceTree = "<group>"; };
@@ -54,6 +68,13 @@
 		483476B71FB76D2F0068BDFD /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		483476B91FB76DBB0068BDFD /* InfoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewModel.swift; sourceTree = "<group>"; };
 		483476BB1FB7D8820068BDFD /* UIImageView+Kingfisher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+Kingfisher.swift"; sourceTree = "<group>"; };
+		4834770A1FBA5F6A0068BDFD /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4834770B1FBA5F6A0068BDFD /* AlamofireImage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AlamofireImage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4834770C1FBA5F6A0068BDFD /* Kingfisher.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Kingfisher.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		483477261FBA61350068BDFD /* RCSGitHUBApiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RCSGitHUBApiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4834772A1FBA61360068BDFD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		483477301FBA61430068BDFD /* ApiTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiTests.swift; sourceTree = "<group>"; };
+		483477321FBA627A0068BDFD /* GistsListTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GistsListTests.swift; sourceTree = "<group>"; };
 		4841891F1FB5F83D009EC310 /* RCSGitHUBApi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RCSGitHUBApi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		484189221FB5F83D009EC310 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		484189241FB5F83D009EC310 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -76,9 +97,19 @@
 		484189531FB6198B009EC310 /* HomeViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModelProtocol.swift; sourceTree = "<group>"; };
 		50F04918A22BB2DCC27F63DD /* Pods-RCSGitHUBApi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RCSGitHUBApi.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RCSGitHUBApi/Pods-RCSGitHUBApi.debug.xcconfig"; sourceTree = "<group>"; };
 		DFAE5C10E64D1A07E8A1CF7D /* Pods-RCSGitHUBApi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RCSGitHUBApi.release.xcconfig"; path = "Pods/Target Support Files/Pods-RCSGitHUBApi/Pods-RCSGitHUBApi.release.xcconfig"; sourceTree = "<group>"; };
+		E91AB9D188C999FB8E75C693 /* Pods_RCSGitHUBApiTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RCSGitHUBApiTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F28E565FFF35BBE15FF03046 /* Pods-RCSGitHUBApiTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RCSGitHUBApiTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RCSGitHUBApiTests/Pods-RCSGitHUBApiTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		483477231FBA61350068BDFD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				85E5DF30955857F8B16CE09C /* Pods_RCSGitHUBApiTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4841891C1FB5F83D009EC310 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -94,8 +125,12 @@
 		2727D8F67DC9913B458A5CEE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4834770A1FBA5F6A0068BDFD /* Alamofire.framework */,
+				4834770B1FBA5F6A0068BDFD /* AlamofireImage.framework */,
+				4834770C1FBA5F6A0068BDFD /* Kingfisher.framework */,
 				484189451FB60C12009EC310 /* Alamofire.framework */,
 				1EF39924F2EFCF053BE29DFA /* Pods_RCSGitHUBApi.framework */,
+				E91AB9D188C999FB8E75C693 /* Pods_RCSGitHUBApiTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -165,11 +200,22 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		483477271FBA61360068BDFD /* RCSGitHUBApiTests */ = {
+			isa = PBXGroup;
+			children = (
+				483477301FBA61430068BDFD /* ApiTests.swift */,
+				4834772A1FBA61360068BDFD /* Info.plist */,
+				483477321FBA627A0068BDFD /* GistsListTests.swift */,
+			);
+			path = RCSGitHUBApiTests;
+			sourceTree = "<group>";
+		};
 		484189161FB5F83D009EC310 = {
 			isa = PBXGroup;
 			children = (
 				484189371FB5FD7A009EC310 /* Podfile */,
 				484189211FB5F83D009EC310 /* RCSGitHUBApi */,
+				483477271FBA61360068BDFD /* RCSGitHUBApiTests */,
 				484189201FB5F83D009EC310 /* Products */,
 				81459DCD41DA0998DC784F25 /* Pods */,
 				2727D8F67DC9913B458A5CEE /* Frameworks */,
@@ -180,6 +226,7 @@
 			isa = PBXGroup;
 			children = (
 				4841891F1FB5F83D009EC310 /* RCSGitHUBApi.app */,
+				483477261FBA61350068BDFD /* RCSGitHUBApiTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -264,6 +311,8 @@
 			children = (
 				50F04918A22BB2DCC27F63DD /* Pods-RCSGitHUBApi.debug.xcconfig */,
 				DFAE5C10E64D1A07E8A1CF7D /* Pods-RCSGitHUBApi.release.xcconfig */,
+				F28E565FFF35BBE15FF03046 /* Pods-RCSGitHUBApiTests.debug.xcconfig */,
+				43E11DD0962CA5990005795C /* Pods-RCSGitHUBApiTests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -271,6 +320,27 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		483477251FBA61350068BDFD /* RCSGitHUBApiTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4834772D1FBA61360068BDFD /* Build configuration list for PBXNativeTarget "RCSGitHUBApiTests" */;
+			buildPhases = (
+				8749D7DFB62C2351CAEAAEDE /* [CP] Check Pods Manifest.lock */,
+				483477221FBA61350068BDFD /* Sources */,
+				483477231FBA61350068BDFD /* Frameworks */,
+				483477241FBA61350068BDFD /* Resources */,
+				5D36525630287A60F89DB124 /* [CP] Embed Pods Frameworks */,
+				12966CF07A9F63D4148EE778 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4834772C1FBA61360068BDFD /* PBXTargetDependency */,
+			);
+			name = RCSGitHUBApiTests;
+			productName = RCSGitHUBApiTests;
+			productReference = 483477261FBA61350068BDFD /* RCSGitHUBApiTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		4841891E1FB5F83D009EC310 /* RCSGitHUBApi */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 484189311FB5F83D009EC310 /* Build configuration list for PBXNativeTarget "RCSGitHUBApi" */;
@@ -301,6 +371,11 @@
 				LastUpgradeCheck = 0910;
 				ORGANIZATIONNAME = rogeriocs;
 				TargetAttributes = {
+					483477251FBA61350068BDFD = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 4841891E1FB5F83D009EC310;
+					};
 					4841891E1FB5F83D009EC310 = {
 						CreatedOnToolsVersion = 9.1;
 						ProvisioningStyle = Automatic;
@@ -321,11 +396,19 @@
 			projectRoot = "";
 			targets = (
 				4841891E1FB5F83D009EC310 /* RCSGitHUBApi */,
+				483477251FBA61350068BDFD /* RCSGitHUBApiTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		483477241FBA61350068BDFD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4841891D1FB5F83D009EC310 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -341,6 +424,36 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		12966CF07A9F63D4148EE778 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RCSGitHUBApiTests/Pods-RCSGitHUBApiTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5D36525630287A60F89DB124 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RCSGitHUBApiTests/Pods-RCSGitHUBApiTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		7769948CFA975E01AB9AAD73 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -353,6 +466,21 @@
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-RCSGitHUBApi-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		8749D7DFB62C2351CAEAAEDE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -399,6 +527,15 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		483477221FBA61350068BDFD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				483477331FBA627A0068BDFD /* GistsListTests.swift in Sources */,
+				483477311FBA61430068BDFD /* ApiTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4841891B1FB5F83D009EC310 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -432,6 +569,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		4834772C1FBA61360068BDFD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4841891E1FB5F83D009EC310 /* RCSGitHUBApi */;
+			targetProxy = 4834772B1FBA61360068BDFD /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		484189261FB5F83D009EC310 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -452,6 +597,38 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		4834772E1FBA61360068BDFD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F28E565FFF35BBE15FF03046 /* Pods-RCSGitHUBApiTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = RCSGitHUBApiTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = rogerio.RCSGitHUBApiTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RCSGitHUBApi.app/RCSGitHUBApi";
+			};
+			name = Debug;
+		};
+		4834772F1FBA61360068BDFD /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 43E11DD0962CA5990005795C /* Pods-RCSGitHUBApiTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = RCSGitHUBApiTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = rogerio.RCSGitHUBApiTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RCSGitHUBApi.app/RCSGitHUBApi";
+			};
+			name = Release;
+		};
 		4841892F1FB5F83D009EC310 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -596,6 +773,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		4834772D1FBA61360068BDFD /* Build configuration list for PBXNativeTarget "RCSGitHUBApiTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4834772E1FBA61360068BDFD /* Debug */,
+				4834772F1FBA61360068BDFD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		4841891A1FB5F83D009EC310 /* Build configuration list for PBXProject "RCSGitHUBApi" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

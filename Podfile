@@ -10,6 +10,11 @@ target 'RCSGitHUBApi' do
     pod 'SwiftLint'
     pod 'ObjectMapper', '~> 3.1.0'
     pod 'Kingfisher', '~> 4.0'
+    
   # Pods for RCSGitHUBApi
-
+  target 'RCSGitHUBApiTests' do
+      inherit! :search_paths
+      pod 'Quick'
+      pod 'Nimble'
+  end
 end

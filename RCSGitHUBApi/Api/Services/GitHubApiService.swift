@@ -23,8 +23,7 @@ extension GitHubApiService: GitHubApiProtocol {
             switch response.result {
                 case .success:
                     if let json =  response.result.value as? [[String : Any]] {
-                        let gitHubResult =  Mapper<GithubApiModel>().mapArray(JSONArray: json)
-                        print(gitHubResult)
+                        let gitHubResult =  Mapper<GithubApiModel>().mapArray(JSONArray: json)                        
                         success(gitHubResult)
                     }
                 
