@@ -12,7 +12,7 @@ class HomeViewController: UITableViewController {
     @IBOutlet weak var loading: UIActivityIndicatorView!
     
     @IBOutlet weak var label: UILabel!
-    var homeViewModel: HomeViewModelProtocol?
+    var homeViewModel: HomeViewModelProtocol? = HomeViewModel.init(gitHubApi: GitHubApiService())
     //var refreshControl = UIRefreshControl()!
     var showGitHubDatas:[ShowGitHubData] = [] {
         didSet { tableView.reloadData() }
@@ -34,7 +34,6 @@ class HomeViewController: UITableViewController {
         load = false
         tableView.register(RepoViewCell.self)
         self.refreshControl = UIRefreshControl()
-        homeViewModel = HomeViewModel.init(gitHubApi: GitHubApiService())
         homeViewModel?.publicRepositoriesDelegate = self
         homeViewModel?.getRepositories()
         if #available(iOS 10.0, *) {
