@@ -13,7 +13,7 @@ class HomeViewController: UITableViewController {
     
     @IBOutlet weak var label: UILabel!
     var homeViewModel: HomeViewModelProtocol? = HomeViewModel.init(gitHubApi: GitHubApiService())
-    //var refreshControl = UIRefreshControl()!
+
     var showGitHubDatas:[ShowGitHubData] = [] {
         didSet { tableView.reloadData() }
     }

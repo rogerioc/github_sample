@@ -10,15 +10,18 @@ import Foundation
 
 class HomeViewModel: HomeViewModelProtocol{
     var gitHubApi : GitHubApiProtocol?
+    var persistRepository:PersistRepositoryProtocol?
     var page:Int = 0
     weak var publicRepositoriesDelegate:GetPublicRepositories?
     
-    required init(gitHubApi: GitHubApiProtocol){
+    required init(gitHubApi:GitHubApiProtocol){
         self.gitHubApi = gitHubApi
+        //self.persistRepository = persistRepository
     }
     
     func getRepositories() {
         page = 0
+        self.persistRepository?.deleteData()
         getData();
     }
     
@@ -29,12 +32,13 @@ class HomeViewModel: HomeViewModelProtocol{
     
     func getData(){
         self.publicRepositoriesDelegate?.repositoriesIsLoading(true)
+       
         gitHubApi?.getPublicRepositories(page: page, success: { (gitHubModel) in
             let showGitHubModels = gitHubModel.map{ HelperConvert.gitHubApiModelToGitHubShow($0)}
             self.publicRepositoriesDelegate?.repositoriesSuccess(data: showGitHubModels)
             self.publicRepositoriesDelegate?.repositoriesIsLoading(false)
         }) { (code, reason) in
-            self.publicRepositoriesDelegate?.repositoriesError(code!)
+            self.publicRepositoriesDelegate?.repositoriesError(code ?? 0)
             self.publicRepositoriesDelegate?.repositoriesIsLoading(false)
         }
     }

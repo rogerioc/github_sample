@@ -7,7 +7,8 @@
 //
 
 import Foundation
-struct ShowGitHubData {
+
+struct ShowGitHubData: Codable  {
     var ownerName:String!
     var type:String!
     var avatar:String!

@@ -13,6 +13,12 @@ protocol HomeViewModelProtocol {
     func getNextData()
 }
 
+protocol PersistRepositoryProtocol {
+    func saveRepositories(data:[ShowGitHubData])
+    func getDataAll() -> [ShowGitHubData]
+    func deleteData()
+}
+
 protocol GetPublicRepositories: class {
     func repositoriesSuccess(data:[ShowGitHubData])
     func repositoriesError(_ error: Int)

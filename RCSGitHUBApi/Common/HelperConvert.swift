@@ -13,9 +13,11 @@ class HelperConvert {
         showGitHubData.ownerName = githubApiModel.owner?.login ?? "No Owner"
         showGitHubData.avatar = githubApiModel.owner?.avatarUrl ?? ""
         let files = githubApiModel.files
-        let filesArray = Array(files!.values)
-        let types = filesArray.map{ $0.type }.joined(separator: ",")
-        showGitHubData.type = types
+        if let filesData = files {
+            let filesArray = Array(filesData.values)
+            let types = filesArray.map{ $0.type }.joined(separator: ",")
+            showGitHubData.type = types
+        }
         return showGitHubData
     }
 }

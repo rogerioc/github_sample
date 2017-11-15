@@ -29,7 +29,7 @@ class ApiTests: QuickSpec {
                     expect(urlRequest).to(beAKindOf(URLRequest.self))
                 })
                 
-                it("should be equal a asolute url", closure: {
+                it("should be equal a absolute url", closure: {
                     expect(urlRequest?.url?.absoluteString).to(equal("https://api.github.com/gists/public?page=0"))
                 })
             })

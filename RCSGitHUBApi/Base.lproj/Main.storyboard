@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -24,7 +25,7 @@
                             <subviews>
                                 <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="IfM-Eu-DFs">
                                     <rect key="frame" x="177" y="315" width="20" height="20"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 </activityIndicatorView>
                             </subviews>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -58,10 +59,21 @@
                                 <color key="textColor" red="0.015686274510000001" green="0.33333333329999998" blue="0.80392156859999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="user-thumb" translatesAutoresizingMaskIntoConstraints="NO" id="VVL-VI-5xk">
-                                <rect key="frame" x="119" y="178" width="136" height="125"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="1wg-bZ-gCK">
+                                <rect key="frame" x="16" y="335" width="343" height="312"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="125" id="M6s-95-h7P"/>
+                                    <constraint firstAttribute="height" constant="312" id="amS-ZA-lgE"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="user-thumb" translatesAutoresizingMaskIntoConstraints="NO" id="VVL-VI-5xk">
+                                <rect key="frame" x="137" y="174" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="VVL-VI-5xk" secondAttribute="height" multiplier="1:1" id="6Ui-Xl-fJn"/>
+                                    <constraint firstAttribute="height" constant="100" id="hir-WJ-Ugf"/>
+                                    <constraint firstAttribute="width" constant="100" id="ldK-30-Is5"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -70,25 +82,21 @@
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="clipsToBounds" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                             </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="1wg-bZ-gCK">
-                                <rect key="frame" x="16" y="335" width="343" height="312"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="VVL-VI-5xk" firstAttribute="top" secondItem="0DS-Sc-du7" secondAttribute="bottom" constant="41" id="0tT-Bj-0EU"/>
                             <constraint firstItem="mk0-la-bzd" firstAttribute="bottom" secondItem="1wg-bZ-gCK" secondAttribute="bottom" constant="20" id="FFA-JS-03l"/>
                             <constraint firstItem="1wg-bZ-gCK" firstAttribute="leading" secondItem="mk0-la-bzd" secondAttribute="leading" constant="16" id="Gqz-8j-tub"/>
-                            <constraint firstItem="VVL-VI-5xk" firstAttribute="top" secondItem="0DS-Sc-du7" secondAttribute="bottom" constant="45" id="PUU-V7-laX"/>
-                            <constraint firstItem="VVL-VI-5xk" firstAttribute="centerX" secondItem="0DS-Sc-du7" secondAttribute="centerX" id="WFT-5G-0qf"/>
+                            <constraint firstItem="mk0-la-bzd" firstAttribute="bottom" secondItem="1wg-bZ-gCK" secondAttribute="bottom" constant="20" id="HRQ-iI-gnm"/>
+                            <constraint firstItem="mk0-la-bzd" firstAttribute="trailing" secondItem="1wg-bZ-gCK" secondAttribute="trailing" constant="16" id="Kl0-KS-Jwy"/>
+                            <constraint firstItem="1wg-bZ-gCK" firstAttribute="leading" secondItem="mk0-la-bzd" secondAttribute="leading" constant="16" id="Vvx-rF-mBR"/>
                             <constraint firstItem="0DS-Sc-du7" firstAttribute="top" secondItem="mk0-la-bzd" secondAttribute="top" constant="48" id="X52-uz-KJ9"/>
                             <constraint firstItem="mk0-la-bzd" firstAttribute="trailing" secondItem="0DS-Sc-du7" secondAttribute="trailing" constant="1" id="ZaI-wk-zDA"/>
-                            <constraint firstItem="1wg-bZ-gCK" firstAttribute="top" secondItem="VVL-VI-5xk" secondAttribute="bottom" constant="32" id="bhR-2M-Rxa"/>
                             <constraint firstItem="mk0-la-bzd" firstAttribute="trailing" secondItem="1wg-bZ-gCK" secondAttribute="trailing" constant="16" id="cY9-9J-E8I"/>
-                            <constraint firstItem="VVL-VI-5xk" firstAttribute="leading" secondItem="mk0-la-bzd" secondAttribute="leading" constant="119" id="gPj-px-GUA"/>
+                            <constraint firstItem="VVL-VI-5xk" firstAttribute="centerX" secondItem="0DS-Sc-du7" secondAttribute="centerX" id="jZm-Ma-NMW"/>
                             <constraint firstItem="0DS-Sc-du7" firstAttribute="leading" secondItem="mk0-la-bzd" secondAttribute="leading" id="jb2-fI-hA5"/>
+                            <constraint firstItem="0DS-Sc-du7" firstAttribute="top" secondItem="mk0-la-bzd" secondAttribute="top" constant="48" id="sRD-Fb-vmX"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="mk0-la-bzd"/>
                     </view>
