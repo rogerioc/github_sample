@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		33EB5C0E23F38ABB006E2336 /* CustomErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33EB5C0D23F38ABB006E2336 /* CustomErrors.swift */; };
 		45E4013A9524BA54E615C381 /* Pods_RCSGitHUBApiTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3E3297D4F89A660E0200FD5 /* Pods_RCSGitHUBApiTests.framework */; };
 		4834769F1FB6FA500068BDFD /* RepoViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4834769E1FB6FA500068BDFD /* RepoViewCell.swift */; };
 		483476A31FB725F10068BDFD /* ShowGitHubData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 483476A21FB725F10068BDFD /* ShowGitHubData.swift */; };
@@ -59,6 +60,7 @@
 
 /* Begin PBXFileReference section */
 		13301B23404977F132AE9178 /* Pods-RCSGitHUBApi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RCSGitHUBApi.release.xcconfig"; path = "Pods/Target Support Files/Pods-RCSGitHUBApi/Pods-RCSGitHUBApi.release.xcconfig"; sourceTree = "<group>"; };
+		33EB5C0D23F38ABB006E2336 /* CustomErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomErrors.swift; sourceTree = "<group>"; };
 		480C9BCC1FBC6DE7003D1A35 /* Quick.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Quick.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4834769C1FB6F95F0068BDFD /* RepoViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RepoViewCell.xib; sourceTree = "<group>"; };
 		4834769E1FB6FA500068BDFD /* RepoViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoViewCell.swift; sourceTree = "<group>"; };
@@ -305,6 +307,7 @@
 				484189461FB60C48009EC310 /* GitHubApiProtocol.swift */,
 				484189481FB60F17009EC310 /* GitHubGetPublicRepositories.swift */,
 				4841894C1FB611E2009EC310 /* GitHubApiService.swift */,
+				33EB5C0D23F38ABB006E2336 /* CustomErrors.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -365,7 +368,6 @@
 				4841891C1FB5F83D009EC310 /* Frameworks */,
 				4841891D1FB5F83D009EC310 /* Resources */,
 				A75D38D58AD4E9DB45E009ED /* [CP] Embed Pods Frameworks */,
-				0E42B1C5AFBB1ABC53D5D31A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -385,7 +387,6 @@
 				484AC91C1FBC71840073AD1F /* Frameworks */,
 				484AC91D1FBC71840073AD1F /* Resources */,
 				3B2DF7FFAD82FED520777578 /* [CP] Embed Pods Frameworks */,
-				D88AB28B0B80F4D96DB0D2E9 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -462,34 +463,22 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		0E42B1C5AFBB1ABC53D5D31A /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RCSGitHUBApi/Pods-RCSGitHUBApi-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		2C9B4E4E53EDF91EE52C32F1 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RCSGitHUBApiTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		3B2DF7FFAD82FED520777578 /* [CP] Embed Pods Frameworks */ = {
@@ -498,13 +487,18 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RCSGitHUBApiTests/Pods-RCSGitHUBApiTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Nimble/Nimble.framework",
+				"${BUILT_PRODUCTS_DIR}/Quick/Quick.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nimble.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Quick.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RCSGitHUBApiTests/Pods-RCSGitHUBApiTests-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RCSGitHUBApiTests/Pods-RCSGitHUBApiTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		A75D38D58AD4E9DB45E009ED /* [CP] Embed Pods Frameworks */ = {
@@ -513,28 +507,22 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RCSGitHUBApi/Pods-RCSGitHUBApi-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
+				"${BUILT_PRODUCTS_DIR}/Disk/Disk.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Disk.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RCSGitHUBApi/Pods-RCSGitHUBApi-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		D88AB28B0B80F4D96DB0D2E9 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RCSGitHUBApiTests/Pods-RCSGitHUBApiTests-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RCSGitHUBApi/Pods-RCSGitHUBApi-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		F4ACD9075FD30623FDD21534 /* [CP] Check Pods Manifest.lock */ = {
@@ -543,13 +531,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RCSGitHUBApi-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -576,6 +567,7 @@
 				48E270F81FBB2C35003C3FD4 /* PersistRepository.swift in Sources */,
 				483476AF1FB730880068BDFD /* ReusableView.swift in Sources */,
 				484189231FB5F83D009EC310 /* AppDelegate.swift in Sources */,
+				33EB5C0E23F38ABB006E2336 /* CustomErrors.swift in Sources */,
 				483476A81FB72CBB0068BDFD /* Alerts.swift in Sources */,
 				484189511FB618AD009EC310 /* HomeViewModel.swift in Sources */,
 				483476BA1FB76DBB0068BDFD /* InfoViewModel.swift in Sources */,

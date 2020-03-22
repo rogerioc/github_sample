@@ -10,8 +10,8 @@ import Foundation
 class HelperConvert {
     static func gitHubApiModelToGitHubShow(_ githubApiModel: GithubApiModel) -> ShowGitHubData {
         var showGitHubData : ShowGitHubData = ShowGitHubData()
-        showGitHubData.ownerName = githubApiModel.owner?.login ?? "No Owner"
-        showGitHubData.avatar = githubApiModel.owner?.avatarUrl ?? ""
+        showGitHubData.ownerName = githubApiModel.owner.login ?? "No Owner"
+        showGitHubData.avatar = githubApiModel.owner.avatarUrl ?? ""
         let files = githubApiModel.files
         if let filesData = files {
             let filesArray = Array(filesData.values)

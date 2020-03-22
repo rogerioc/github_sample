@@ -8,8 +8,6 @@
 
 import Foundation
 import Alamofire
-import SwiftyJSON
-import ObjectMapper
 
 class GitHubApiService {
     
@@ -18,14 +16,23 @@ class GitHubApiService {
 extension GitHubApiService: GitHubApiProtocol {
     func getPublicRepositories(page: Int, success: @escaping (_ gitApiModel: [GithubApiModel]) -> Void, failure: @escaping (_ code: Int?, _ reason: String?) -> Void) {
         let parameters: [String: Any] = ["page":page]
-        Alamofire.request(GitHubApi.getPublicRepositories(parameters: parameters)).validate().responseJSON { response in
+        Alamofire.request(GitHubApi.getPublicRepositories(parameters: parameters)).validate().responseData { response in
             let status = response.response?.statusCode
             switch response.result {
                 case .success:
-                    if let json =  response.result.value as? [[String : Any]] {
-                        let gitHubResult =  Mapper<GithubApiModel>().mapArray(JSONArray: json)                        
-                        success(gitHubResult)
-                    }
+                        guard let data = response.data else {
+                            let error = CustomErros.network(type: .parsing)
+                            failure(0, (error as! Error).localizedDescription)
+                            return
+                        }
+                        let decoder = JSONDecoder()
+                        do {
+                            let gitHubResult = try decoder.decode([GithubApiModel].self, from:  data )
+                             success(gitHubResult)
+                        } catch {
+                            print(error)
+                            failure(status, response.result.description)
+                        }
                 
                 case let .failure(error):
                     print(error)
