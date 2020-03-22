@@ -1,4 +1,4 @@
-# Netshoes-mobile-test
+# GitHub_Sample
 
 Create an app, that list gist from github public API.When the user select it will see a detail page of that gist.
 
