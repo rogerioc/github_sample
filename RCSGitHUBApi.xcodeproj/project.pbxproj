@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		333252A42427B687009D4E9C /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 333252A32427B687009D4E9C /* UIColor.swift */; };
+		333252A62427B883009D4E9C /* Bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 333252A52427B883009D4E9C /* Bundle.swift */; };
+		333252A82427BC24009D4E9C /* MetricsViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 333252A72427BC24009D4E9C /* MetricsViews.swift */; };
 		33EB5C0E23F38ABB006E2336 /* CustomErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33EB5C0D23F38ABB006E2336 /* CustomErrors.swift */; };
 		45E4013A9524BA54E615C381 /* Pods_RCSGitHUBApiTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3E3297D4F89A660E0200FD5 /* Pods_RCSGitHUBApiTests.framework */; };
 		4834769F1FB6FA500068BDFD /* RepoViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4834769E1FB6FA500068BDFD /* RepoViewCell.swift */; };
@@ -60,6 +63,9 @@
 
 /* Begin PBXFileReference section */
 		13301B23404977F132AE9178 /* Pods-RCSGitHUBApi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RCSGitHUBApi.release.xcconfig"; path = "Pods/Target Support Files/Pods-RCSGitHUBApi/Pods-RCSGitHUBApi.release.xcconfig"; sourceTree = "<group>"; };
+		333252A32427B687009D4E9C /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		333252A52427B883009D4E9C /* Bundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bundle.swift; sourceTree = "<group>"; };
+		333252A72427BC24009D4E9C /* MetricsViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetricsViews.swift; sourceTree = "<group>"; };
 		33EB5C0D23F38ABB006E2336 /* CustomErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomErrors.swift; sourceTree = "<group>"; };
 		480C9BCC1FBC6DE7003D1A35 /* Quick.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Quick.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4834769C1FB6F95F0068BDFD /* RepoViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RepoViewCell.xib; sourceTree = "<group>"; };
@@ -181,6 +187,7 @@
 				483476A51FB726590068BDFD /* HelperConvert.swift */,
 				483476A71FB72CBB0068BDFD /* Alerts.swift */,
 				483476A91FB72E990068BDFD /* Messages.swift */,
+				333252A72427BC24009D4E9C /* MetricsViews.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -192,6 +199,8 @@
 				483476B01FB734EA0068BDFD /* NibLoadableView.swift */,
 				483476AE1FB730870068BDFD /* ReusableView.swift */,
 				483476AB1FB7300D0068BDFD /* UITableView+Extension.swift */,
+				333252A32427B687009D4E9C /* UIColor.swift */,
+				333252A52427B883009D4E9C /* Bundle.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -551,8 +560,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				483476BC1FB7D8820068BDFD /* UIImageView+Kingfisher.swift in Sources */,
+				333252A62427B883009D4E9C /* Bundle.swift in Sources */,
 				484189251FB5F83D009EC310 /* ViewController.swift in Sources */,
 				483476AA1FB72E990068BDFD /* Messages.swift in Sources */,
+				333252A82427BC24009D4E9C /* MetricsViews.swift in Sources */,
 				483476AC1FB7300E0068BDFD /* UITableView+Extension.swift in Sources */,
 				484189471FB60C48009EC310 /* GitHubApiProtocol.swift in Sources */,
 				4834769F1FB6FA500068BDFD /* RepoViewCell.swift in Sources */,
@@ -572,6 +583,7 @@
 				484189511FB618AD009EC310 /* HomeViewModel.swift in Sources */,
 				483476BA1FB76DBB0068BDFD /* InfoViewModel.swift in Sources */,
 				4841894F1FB61852009EC310 /* HomeViewController.swift in Sources */,
+				333252A42427B687009D4E9C /* UIColor.swift in Sources */,
 				484189491FB60F17009EC310 /* GitHubGetPublicRepositories.swift in Sources */,
 				484189431FB60990009EC310 /* GitHubApi.swift in Sources */,
 				4841893E1FB606F5009EC310 /* FileInfo.swift in Sources */,

@@ -9,9 +9,10 @@
 import UIKit
 
 class HomeViewController: UITableViewController {
-    @IBOutlet weak var loading: UIActivityIndicatorView!
     
+    @IBOutlet weak var loading: UIActivityIndicatorView!
     @IBOutlet weak var label: UILabel!
+    let cellName = "repoCell"
     var homeViewModel: HomeViewModelProtocol? = HomeViewModel.init(gitHubApi: GitHubApiService())
 
     var showGitHubDatas:[ShowGitHubData] = [] {
@@ -32,7 +33,7 @@ class HomeViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         load = false
-        tableView.register(RepoViewCell.self)
+        tableView.register(RepoViewCell.self, forCellReuseIdentifier: cellName)
         self.refreshControl = UIRefreshControl()
         homeViewModel?.publicRepositoriesDelegate = self
         homeViewModel?.getRepositories()
@@ -41,6 +42,8 @@ class HomeViewController: UITableViewController {
         } else {
             tableView.addSubview(refreshControl!)
         }
+        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.estimatedRowHeight = 120
         refreshControl!.addTarget(self, action: #selector(refreshData(_:)), for: .valueChanged)
 
     }
@@ -81,7 +84,7 @@ extension HomeViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell : RepoViewCell = tableView.dequeueReusableCell(for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellName, for: indexPath) as! RepoViewCell
         cell.setup(showGitHubData:showGitHubDatas[indexPath.row])
         if indexPath.row == showGitHubDatas.count-1 {
             homeViewModel?.getNextData()
