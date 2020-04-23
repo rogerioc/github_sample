@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import RxSwift
 
 struct InfoViewConstants {
     struct SegueIdentifiers {
@@ -16,4 +17,15 @@ struct InfoViewConstants {
 
 class InfoViewModel {
     
+    private var showGitHubData: ShowGitHubData
+    
+    var showData = PublishSubject<ShowGitHubData>()
+    
+    init(showGitHubData: ShowGitHubData) {
+        self.showGitHubData = showGitHubData
+    }
+    
+    func start() {
+        showData.onNext(self.showGitHubData)
+    }
 }

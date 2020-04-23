@@ -7,7 +7,7 @@ target 'RCSGitHUBApi' do
     pod 'AlamofireImage', '~> 3.1'
     pod 'Kingfisher', '~> 4.0'
     pod 'Disk', '~> 0.3.2'
-    
+    pod 'RxSwift'
   # Pods for RCSGitHUBApi
   target 'RCSGitHUBApiTests' do
       inherit! :search_paths

@@ -9,7 +9,9 @@
 
 import UIKit
 
-class RepoViewCell: UITableViewCell,ReusableView,NibLoadableView  {
+class RepoViewCell: UITableViewCell, ReusableView  {
+    
+    // MARK: Properties
     
     lazy var name: UILabel = {
         let label = UILabel(frame: .zero)
@@ -40,29 +42,37 @@ class RepoViewCell: UITableViewCell,ReusableView,NibLoadableView  {
         return image
     }()
     
+    // MARK: Init
+    
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         contentView.addSubview(stackData)
         contentView.addSubview(avatar)
+               
+       NSLayoutConstraint.activate([
+           avatar.topAnchor.constraint(equalTo: contentView.topAnchor, constant: MetricsViews.topAndBottomMargin),
+           avatar.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
+           avatar.heightAnchor.constraint(equalTo: contentView.heightAnchor),
+           avatar.heightAnchor.constraint(equalToConstant: 92),
+           avatar.widthAnchor.constraint(equalToConstant: 93),
+           avatar.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: 10),
+           stackData.topAnchor.constraint(equalTo: contentView.topAnchor, constant: MetricsViews.topAndBottomMargin),
+           stackData.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: MetricsViews.leftAndRigthMargin),
+           stackData.trailingAnchor.constraint(equalTo: avatar.leadingAnchor),
+       ])
         
-        NSLayoutConstraint.activate([            
-            avatar.topAnchor.constraint(equalTo: contentView.topAnchor, constant: MetricsViews.topAndBottomMargin),
-            avatar.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
-            avatar.heightAnchor.constraint(equalTo: contentView.heightAnchor),
-            avatar.heightAnchor.constraint(equalToConstant: 93),
-            avatar.widthAnchor.constraint(equalToConstant: 93),
-            stackData.topAnchor.constraint(equalTo: contentView.topAnchor, constant: MetricsViews.topAndBottomMargin),
-            stackData.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: MetricsViews.leftAndRigthMargin),
-            stackData.trailingAnchor.constraint(equalTo: avatar.leadingAnchor),
-        ])
     }
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
-        //fatalError("init(coder:) has not been implemented")
+    
     }
     
+    
+    // MARK: Methods
+    
     func setup(showGitHubData:ShowGitHubData) {
+               
         name.text = showGitHubData.ownerName
         type.text = showGitHubData.type
         avatar.image = nil

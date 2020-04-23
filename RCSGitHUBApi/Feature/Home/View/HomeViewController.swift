@@ -10,11 +10,15 @@ import UIKit
 
 class HomeViewController: UITableViewController {
     
-    @IBOutlet weak var loading: UIActivityIndicatorView!
-    @IBOutlet weak var label: UILabel!
+    lazy var loading: UIActivityIndicatorView = {
+        let loading = UIActivityIndicatorView(frame: .zero)
+        loading.translatesAutoresizingMaskIntoConstraints = false
+        return loading
+    }()
+   
     let cellName = "repoCell"
-    var homeViewModel: HomeViewModelProtocol? = HomeViewModel.init(gitHubApi: GitHubApiService())
-
+    var homeViewModel: HomeViewModel?
+    
     var showGitHubDatas:[ShowGitHubData] = [] {
         didSet { tableView.reloadData() }
     }
@@ -30,8 +34,22 @@ class HomeViewController: UITableViewController {
         }
     }
     
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+    }
+    
+    override init(style: UITableViewStyle) {
+        super.init(style: style)
+    }
+    
+    public init() {
+        super.init(nibName: nil, bundle: nil)
+        
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.addSubview(loading)
         load = false
         tableView.register(RepoViewCell.self, forCellReuseIdentifier: cellName)
         self.refreshControl = UIRefreshControl()
@@ -45,7 +63,13 @@ class HomeViewController: UITableViewController {
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 120
         refreshControl!.addTarget(self, action: #selector(refreshData(_:)), for: .valueChanged)
-
+        
+        NSLayoutConstraint.activate([
+            loading.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+            loading.centerXAnchor.constraint(equalTo: view.centerXAnchor)
+        ])
+        
+        title = NSLocalizedString("home.title", comment: "")
     }
     
     @objc private func refreshData(_ sender: Any) {
@@ -57,7 +81,7 @@ class HomeViewController: UITableViewController {
 
 extension HomeViewController: GetPublicRepositories {
     func repositoriesSuccess(data:[ShowGitHubData]) {
-          self.showGitHubDatas.append(contentsOf: data)
+          self.showGitHubDatas = data
         
     }
     func repositoriesError(_ error: Int) {
@@ -97,7 +121,7 @@ extension HomeViewController {
 // MARK: - UITableViewDelegate
 extension HomeViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: InfoViewConstants.SegueIdentifiers.InfoView, sender: showGitHubDatas[indexPath.row])
+        homeViewModel?.selected(atIndex: indexPath.row)
     }
 }
 
@@ -105,16 +129,16 @@ extension HomeViewController {
 extension HomeViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        if let identifier = segue.identifier {
-            switch identifier {
-            case InfoViewConstants.SegueIdentifiers.InfoView:
-                if let destinationController = segue.destination as? InfoViewController {
-                    destinationController.showGitHubData = sender as? ShowGitHubData ?? ShowGitHubData()
-                }
-                
-            default:
-                self.showAlerError(title: Messages.ErrorTitle, message: Messages.InternalError)
-            }
-        }
+//        if let identifier = segue.identifier {
+//            switch identifier {
+//            case InfoViewConstants.SegueIdentifiers.InfoView:
+//                if let destinationController = segue.destination as? InfoViewController {
+//                    destinationController.showGitHubData = sender as? ShowGitHubData ?? ShowGitHubData()
+//                }
+//                
+//            default:
+//                self.showAlerError(title: Messages.ErrorTitle, message: Messages.InternalError)
+//            }
+//        }
     }
 }

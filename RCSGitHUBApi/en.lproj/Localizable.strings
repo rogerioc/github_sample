@@ -1,0 +1,9 @@
+/* 
+  Localizable.strings
+  RCSGitHUBApi
+
+  Created by rogerio on 23/04/20.
+  Copyright © 2020 rogeriocs. All rights reserved.
+*/
+"home.title" = "GitHub Lista";
+"detail.title" = "Detalhe";
