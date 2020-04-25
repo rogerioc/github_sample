@@ -109,13 +109,18 @@ extension HomeViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellName, for: indexPath) as! RepoViewCell
-        cell.setup(showGitHubData:showGitHubDatas[indexPath.row])
+        let repocellViewModel = RepoCellViewModel(showGitHubData: showGitHubDatas[indexPath.row])
+        cell.viewModel = repocellViewModel
+        cell.viewModel?.start()
+        
         if indexPath.row == showGitHubDatas.count-1 {
             homeViewModel?.getNextData()
         }
         
         return cell
     }
+    
+    
 }
 
 // MARK: - UITableViewDelegate

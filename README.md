@@ -1,6 +1,6 @@
 # GitHub_Sample
 
-Create an app, that list gist from github public API.When the user select it will see a detail page of that gist.
+This sample i use view code strategy. 
 
 # Screens
 ### Gist List
@@ -20,11 +20,6 @@ The detail page must have :
 - Detail page must be accessed on list click
 - Unit Tests
 - UI Tests
-
-# Non functional requirements
-The app must be prepared to be fault tolerant, responsive and resilient.
-    Use whatever language, tools and frameworks you feel comfortable to.
-    Fork this repository and submit your code.
 
 # More points
 You get more points if it works offline

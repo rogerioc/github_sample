@@ -8,10 +8,12 @@
 
 
 import UIKit
+import RxSwift
 
 class RepoViewCell: UITableViewCell, ReusableView  {
     
     // MARK: Properties
+    let bag = DisposeBag()
     
     lazy var name: UILabel = {
         let label = UILabel(frame: .zero)
@@ -42,6 +44,8 @@ class RepoViewCell: UITableViewCell, ReusableView  {
         return image
     }()
     
+    var viewModel: RepoCellViewModel?
+    
     // MARK: Init
     
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
@@ -61,22 +65,25 @@ class RepoViewCell: UITableViewCell, ReusableView  {
            stackData.trailingAnchor.constraint(equalTo: avatar.leadingAnchor),
        ])
         
+        bind()        
     }
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
     
     }
-    
+        
     
     // MARK: Methods
     
-    func setup(showGitHubData:ShowGitHubData) {
-               
-        name.text = showGitHubData.ownerName
-        type.text = showGitHubData.type
-        avatar.image = nil
-        avatar.download(image: showGitHubData.avatar)
+    private func bind() {
+        viewModel?.showData.subscribe(onNext: { [weak self] (showGitHubData) in
+                self?.name.text = showGitHubData.ownerName
+                self?.type.text = showGitHubData.type
+                self?.avatar.image = nil
+                self?.avatar.download(image: showGitHubData.avatar)
+            }).disposed(by: bag)
     }
+    
     
 }

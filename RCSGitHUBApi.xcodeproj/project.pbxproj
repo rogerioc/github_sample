@@ -10,6 +10,7 @@
 		3307F2EA2452476800D60A37 /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3307F2E92452476800D60A37 /* HomeCoordinator.swift */; };
 		3307F2EC24524A3F00D60A37 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3307F2EB24524A3F00D60A37 /* Coordinator.swift */; };
 		3307F2EF2452626000D60A37 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3307F2F12452626000D60A37 /* Localizable.strings */; };
+		3307F2F3245264B300D60A37 /* RepoCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3307F2F2245264B300D60A37 /* RepoCellViewModel.swift */; };
 		333252A42427B687009D4E9C /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 333252A32427B687009D4E9C /* UIColor.swift */; };
 		333252A62427B883009D4E9C /* Bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 333252A52427B883009D4E9C /* Bundle.swift */; };
 		333252A82427BC24009D4E9C /* MetricsViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 333252A72427BC24009D4E9C /* MetricsViews.swift */; };
@@ -68,6 +69,7 @@
 		3307F2E92452476800D60A37 /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
 		3307F2EB24524A3F00D60A37 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		3307F2F02452626000D60A37 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		3307F2F2245264B300D60A37 /* RepoCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoCellViewModel.swift; sourceTree = "<group>"; };
 		333252A32427B687009D4E9C /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		333252A52427B883009D4E9C /* Bundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bundle.swift; sourceTree = "<group>"; };
 		333252A72427BC24009D4E9C /* MetricsViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetricsViews.swift; sourceTree = "<group>"; };
@@ -171,6 +173,7 @@
 			isa = PBXGroup;
 			children = (
 				4834769E1FB6FA500068BDFD /* RepoViewCell.swift */,
+				3307F2F2245264B300D60A37 /* RepoCellViewModel.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -587,6 +590,7 @@
 				3307F2EA2452476800D60A37 /* HomeCoordinator.swift in Sources */,
 				483476AF1FB730880068BDFD /* ReusableView.swift in Sources */,
 				484189231FB5F83D009EC310 /* AppDelegate.swift in Sources */,
+				3307F2F3245264B300D60A37 /* RepoCellViewModel.swift in Sources */,
 				33EB5C0E23F38ABB006E2336 /* CustomErrors.swift in Sources */,
 				483476A81FB72CBB0068BDFD /* Alerts.swift in Sources */,
 				484189511FB618AD009EC310 /* HomeViewModel.swift in Sources */,
